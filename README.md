@@ -76,7 +76,7 @@ Output: This is an example sentence with a typo.
    ```
    Перед, медвед!
    ```
-## Пример1: Расширенные настройки параметров
+## Пример: Расширенные настройки параметров
 
 ```python
 from autocorrect import Speller
