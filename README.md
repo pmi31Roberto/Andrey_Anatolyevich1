@@ -76,3 +76,42 @@ Output: This is an example sentence with a typo.
    ```
    Перед, медвед!
    ```
+## Пример1: Расширенные настройки параметров
+
+```python
+from autocorrect import Speller
+
+# Создаем экземпляр класса Speller с расширенными параметрами
+spell_checker = Speller(lang='en', frequency_threshold=0.1, fast_correction=True, max_replacements=3)
+
+# Пример использования с опечаткой и расширенными настройками
+input_sentence = "Thiss is an example sentence with a lot of typppos."
+corrected_sentence = spell_checker.autocorrect_sentence(input_sentence)
+
+print(f"Input: {input_sentence}")
+print(f"Output: {corrected_sentence}")
+```
+#Вывод
+```
+Input: Thiss is an example sentence with a lot of typppos.
+Output: This is an example sentence with a typo.
+```
+## Пример: Добавление поддержки нового языка
+```
+from autocorrect import Speller
+
+# Создаем экземпляр класса Speller с добавлением нового языка
+spell_checker = Speller(lang='es')
+
+# Пример использования с опечаткой на испанском языке
+input_sentence = "Esto es un ejemplo de oración con un errror."
+corrected_sentence = spell_checker.autocorrect_sentence(input_sentence)
+
+print(f"Input: {input_sentence}")
+print(f"Output: {corrected_sentence}")
+```
+#Вывод
+```
+Input: Esto es un ejemplo de oración con un errror.
+Output: Esto es un ejemplo de oración con un error.
+```
